@@ -19,7 +19,7 @@ try:
     tx_data = bytearray(range(0, 256))
     dev.write(tx_data)
     
-    rx_data = bytearray(dev.read(257, timeout = 0))
+    rx_data = bytearray(dev.read(257))#, timeout = 0))
     
     if len(rx_data) == 256 :
       print "\n\n[Test] Test 1 Passed: Sent 256 bytes of data, received 256 bytes of data"
